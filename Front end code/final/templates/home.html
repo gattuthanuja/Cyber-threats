@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="header">
+<img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo" style="height: 3cm; width: 3cm;">
+<p class="text_content">Enhancing Cloud Security with Deep Learning -<br>
+    An ANN Approach for Cyber Threat Detection</p></div>
+
+    <div>
+
+<p class="cp1"> Team Members: Bojja Sobharani, Gattu Thanuja ,Thalapaneni Suma Durga </p>
+
+<img src="{{ url_for('static', filename='download.jpg') }}" alt="Example Image" style="float: left; margin-right: 20px; width: 50%; height: 150%;">
+<h2>What is Cyber Threat ?</h2>
+<p>A cyber threat refers to any malicious attempt or activity aimed at damaging, stealing, disrupting, or gaining unauthorized access to digital systems, networks, devices, or data. Cyber threats exploit vulnerabilities in computer systems and networks, often with the intent to cause harm to individuals, organizations, or governments.</p>
+<h2>Types of Cyber Threats</h2>
+<p>
+    <b>Encryption:</b>software such as viruses, worms, ransomware, and spyware designed to damage or disrupt systems.
+    
+<b>Example: </b>Example: Ransomware encrypting files and demanding payment for decryption.
+    <b>Phishing:</b> Fraudulent attempts to obtain sensitive information (like passwords or credit card details) by pretending to be a trustworthy entity, often through email or fake websites.
+    
+    <b>Distributed Denial of Service (DDoS) Attacks:</b>Overloading a server with excessive traffic to make it unavailable to legitimate users.
+    
+   <b> Man-in-the-Middle (MITM) Attacks:</b> Intercepting and altering communications between two parties without their knowledge.
+    
+  <b>  SQL Injection:</b>Exploiting vulnerabilities in database-driven applications to manipulate or steal data.
+    
+    Zero-Day Exploits: Attacks targeting vulnerabilities that are unknown to software developers or vendors.</p>
+    <h2>What is Cloud Security ?</h2>
+    <p><b>Cloud security </b>involves a set of technologies, policies, controls, and practices designed to protect cloud-based systems, data, and applications from cyber threats. With the growing reliance on cloud computing, cloud security plays a critical role in safeguarding sensitive information and maintaining trust in cloud services.</p>
+<h2>How Cloud Security Works Against Cyber Threats</h2><p>Data Protection
+
+    <b>Encryption:</b> Data is encrypted both in transit (while moving between users and the cloud) and at rest (stored in the cloud). This ensures that even if data is intercepted or stolen, it remains unreadable without the encryption key.
+    Access Control: Strict policies, such as multi-factor authentication (MFA) and role-based access control (RBAC), ensure that only authorized users can access sensitive data.</p>
+<p>Threat Detection and Prevention
+
+    <b>Firewalls:</b> Cloud-based firewalls monitor and filter traffic to prevent unauthorized access to resources.
+    Intrusion Detection and Prevention Systems (IDPS): These systems identify and block malicious activities, such as unauthorized access attempts or malware.
+    Machine Learning (ML) and AI: Many cloud providers leverage AI and ML algorithms to detect unusual patterns and predict potential threats before they escalate.</p>
+    <p><b>Continuous Monitoring</b>
+
+        Cloud providers employ real-time monitoring and logging to track activities and detect anomalous behavior.
+        Security Information and Event Management (SIEM) tools aggregate and analyze logs for potential threats.</p>
+{% endblock %}

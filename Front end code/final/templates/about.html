@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Introduction</h2>
+<p>This project aims to enhance cloud security using deep learning techniques to detect cyber threats. the era of digital transformation, cloud computing has become a cornerstone of modern IT infrastructure. However, with its growth comes an increase in security vulnerabilities, including data breaches, insider threats, and sophisticated cyber attacks. This project focuses on developing an Artificial Neural Network (ANN) model to enhance cloud security by effectively detecting and mitigating these threats.</p>
+<h2>Methodology</h2>
+<img src="{{ url_for('static', filename='threat.png') }}" alt="Example Image" style="float: right; margin-right: 20px; width: 50%; height: 150%;">
+<p><b>Data Collection: </b>We utilized multiple datasets, including:<br>
+
+    - CICIDS 2017: A comprehensive dataset that simulates various network attack scenarios.
+    
+    - UNSW-NB15: A dataset designed to provide insights into normal and malicious traffic patterns.
+    
+    - Malicious URLs Dataset: Contains data on harmful links to enhance detection capabilities.
+    
+    <b>Model Development: </b>The ANN model was trained using advanced techniques such as:<br><br>
+    
+    <b class="b1">- Levenberg-Marquardt</b><br><br>
+    
+    <b class="b1">- Scaled Conjugate Gradient</b><br><br>
+    
+   <b class="b1"> - Bayesian Regularization</b></p>
+   <h2>Performance Evaluation:</h2>
+  
+
+   <p>The model's effectiveness was assessed based on metrics such as <br><br><b class="b1">-accuracy</b><br> <b class="b1">-precision</b> <br><b class="b1">-recall,</b><br> <b class="b1">-F1-Score</b><br><b class="b1">-minimizing false positives and negatives</b></p>
+   Accuracy is the ratio of correctly predicted instances (both true positives and true negatives) to the total instances in the dataset. It provides a general measure of how well the model performs across all classes.Precision, also known as positive predictive value, is the ratio of true positive predictions to the total predicted positives (true positives + false positives). It measures the accuracy of the positive predictions made by the model.
+<h2>Results:</h2>
+<p>
+
+    The ANN model demonstrated significant improvements in threat detection accuracy:<br><br>
+    
+    <b>- UNSW-NB15 Dataset: Achieved an accuracy of <b>90.12%.</b><br>
+    
+    <b>- CICIDS 2017 Dataset: Reached an accuracy of <b>90.12%.</b></p>
+    </b>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="form-container">
+    <form method="POST" action="/prediction">
+        <div class="form-group">
+            <label for="feature1">Duration:</label>
+            <input type="text" id="feature1" name="feature1" required>
+        </div>
+
+        <div class="form-group">
+            <label for="feature2">Protocol Type:</label>
+            <input type="text" id="feature2" name="feature2" required>
+        </div>
+
+        <div class="form-group">
+            <label for="feature3">Service:</label>
+            <input type="text" id="feature3" name="feature3" required>
+        </div>
+
+        <div class="form-group">
+            <label for="feature4">State:</label>
+            <input type="text" id="feature4" name="feature4" required>
+        </div>
+
+        <div class="form-group">
+            <label for="feature5">Source Packets:</label>
+            <input type="text" id="feature5" name="feature5" required>
+        </div>
+
+        <div class="form-group">
+            <label for="feature6">Destination Packets:</label>
+            <input type="text" id="feature6" name="feature6" required>
+        </div>
+
+        <div class="form-group">
+            <label for="feature7">Source Bytes:</label>
+            <input type="text" id="feature7" name="feature7" required>
+        </div>
+
+        <div class="form-group">
+            <label for="feature8">Destination Bytes:</label>
+            <input type="text" id="feature8" name="feature8" required>
+        </div>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+        <div class="result">
+            <p>{{ prediction }}</p>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

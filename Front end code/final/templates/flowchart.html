@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Flowchart(Architecture of the Artificial Neural Network (ANN) Model)</h2>
+<img class="i" src="{{ url_for('static', filename='screen1.png') }}" alt="Flowchart" style="float:auto;  width: 70%; height: 40%; float:auto;">
+<p><h3>Architecture of the Artificial Neural Network (ANN) Model</h3><br><br>
+
+    The architecture of our Artificial Neural Network (ANN) model is designed to effectively detect cyber threats by leveraging the capabilities of deep learning. The model consists of multiple layers, each serving a specific purpose in the processing and classification of input data. Below is a detailed explanation of the architecture components:
+    <br>
+    <b>1. Input Layer</b><br>
+    
+    The input layer is the first layer of the ANN, where the model receives the raw data. In our case, the input consists of features extracted from the datasets (CICIDS 2017 and UNSW-NB15) that represent various attributes of network traffic. Each feature corresponds to a specific characteristic of the data, such as packet size, protocol type, and duration of connections.
+    <br>
+    <b>2. Hidden Layers</b>
+    
+    The hidden layers are the core of the ANN architecture, where the actual learning and feature extraction occur. Our model includes multiple hidden layers, each containing a number of neurons (nodes). The neurons in these layers apply activation functions to the weighted sum of their inputs, allowing the model to learn complex patterns and relationships within the data.
+    
+    - Activation Functions: We utilize activation functions such as ReLU (Rectified Linear Unit) or Sigmoid in the hidden layers to introduce non-linearity into the model. This non-linearity enables the ANN to learn intricate patterns that are essential for effective threat detection.
+    <br>
+   <b> 3. Output Layer</b>
+    
+    The output layer is the final layer of the ANN, where the model produces its predictions. For our cyber threat detection task, the output layer typically consists of one or more neurons, depending on whether the task is binary classification (e.g., threat vs. no threat) or multi-class classification (e.g., different types of threats).
+    
+    - Softmax Activation: In the case of multi-class classification, we use the Softmax activation function in the output layer to convert the raw output scores into probabilities, allowing us to interpret the model's predictions as the likelihood of each class.
+    <br>
+   <b> 4. Loss Function</b>
+    
+    To train the ANN, we define a loss function that quantifies the difference between the predicted outputs and the actual labels. Common loss functions for classification tasks include Cross-Entropy Loss, which is particularly effective for multi-class problems. The model aims to minimize this loss during training.
+    <br>
+    <b>5. Optimization Algorithm</b>
+    
+    An optimization algorithm is employed to update the weights of the neurons based on the gradients calculated from the loss function. We utilize algorithms such as Stochastic Gradient Descent (SGD), Adam, or Levenberg-Marquardt to efficiently adjust the weights and improve the model's performance.
+    <br>
+  <b>  6. Regularization Techniques</b>
+    
+    To prevent overfitting and enhance the generalization of the model, we incorporate regularization techniques such as dropout and L2 regularization. Dropout randomly deactivates a fraction of neurons during training, forcing the model to learn more robust features.
+    <br>
+  <b>  7. Hyperparameter Tuning</b>
+    
+    The architecture of the ANN is further refined through hyperparameter tuning, where parameters such as the number of hidden layers, number of neurons per layer, learning rate, and batch size are optimized to achieve the best performance on the validation dataset.</p>
+{% endblock %}

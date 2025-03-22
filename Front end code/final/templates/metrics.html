@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Model Evaluation Metrics</h2>
+<p>Evaluating the performance of a machine learning model is crucial to understanding its effectiveness in real-world applications. In the context of our Artificial Neural Network (ANN) model for cyber threat detection, we utilized several key evaluation metrics to assess its performance comprehensively. These metrics include accuracy, precision, recall, F1 score, and others, each providing unique insights into the model's capabilities.</p>
+<p>Accuracy<br>
+
+    Definition: Accuracy is the proportion of true results (both true positives and true negatives) among the total number of cases examined. It is calculated as:<br><br>
+    <b class="b1">Accuracy=(True Positives+True Negatives)/Total Instances</b></p>
+<img src="{{ url_for('static', filename='screen2.png') }}" alt="Example Image" style="float: left; margin-right: 20px; width: 40%; height: 100%;"><br><br>
+<p>Precision<br>
+Definition: Precision measures the accuracy of the positive predictions made by the model. It is calculated as:<br><br>
+    <b> Precision=(True Positives+False Positives)/True Positives</b>​</p>
+<p>Importance: High precision is essential in cybersecurity, as it indicates that when the model predicts a threat, it is likely to be correct, thus minimizing false alarms.</p>
+<p>Recall (Sensitivity)<br>
+
+    Definition: Recall, also known as sensitivity, measures the model's ability to identify all relevant instances. It is calculated as:<br><br>
+    <b>Recall=(True Positives+False Negatives)/TruePositives​</b><br><br>
+    
+    Importance: High recall is crucial for ensuring that most actual threats are detected, which is vital in preventing security breaches.</p><br>
+    <img src="{{ url_for('static', filename='screen3.png') }}" alt="Example Image" style="float:auto;  width: 100%; height: 100%;">
+   <p> F1 Score<br>
+
+    Definition: The F1 score is the harmonic mean of precision and recall, providing a single metric that balances both concerns. It is calculated as:<br><br>
+    <b>F1-Score=2*(Precision*Recall)/(Precision+Recall)</b> </p>
+{% endblock %}
