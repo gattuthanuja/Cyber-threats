@@ -1,0 +1,253 @@
+Delivered-To: gattuthanuja23@gmail.com
+Received: by 2002:a05:6022:841c:b0:60:ba17:e1f with SMTP id cd28csp1171480lab;
+        Wed, 16 Oct 2024 21:17:40 -0700 (PDT)
+X-Received: by 2002:a17:907:8687:b0:a9a:1af0:ee18 with SMTP id a640c23a62f3a-a9a34c83701mr498360866b.5.1729138659734;
+        Wed, 16 Oct 2024 21:17:39 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1729138659; cv=none;
+        d=google.com; s=arc-20240605;
+        b=hfccTCRagiQRK+lS8L2CVLVW7TwhKST+ITkLTFTKJlju2KbKBtRiVDbfBTHquaSFhM
+         hb8HIvACub0GuvhEqhGlvbZ361Lc6AtyW18e4yeh1HsTzuDSWQtNlhtwGXaoNecgBUeD
+         EpPdJ7M1syJBxp70rK3TlhX70nbwYLZ4X6o9nT1OorhH3KvxoiZU9ABThLAF1Q0sCNQN
+         3Ehtk1qLkooWKdjA9iw0ZxHfObs3KFRSoFQADmrTzHNDeZm7ckDNkmyU04aKV3F+y7Wi
+         TX/XqPhBFwqz9w+Rz175cIpB2R9b4UZEqrYFBBwWZhIxYKyatYSeicBLuopPwRLLo/dD
+         aGFQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=B7kW5+p+Zra1QMGn+G6TgEwTw2itOtAwSczuVhUpJgk=;
+        fh=pG3Qf0pdBeCgiMpSX561i4qlKHbkOGJMisSlVAWE88w=;
+        b=Xi22BMDWWPAy01tdOa73+iwZWdAQhLBzqB8+BXmOuhYmMOqQer87Ty2QsOSsPHeVcC
+         HJ46/QrHnvWeHq7Z9IlR4NNxvKn8X4eHli4xAop2PcMiV5Op4rZXNBGywBToVPLUrhAF
+         fTwCYTDs173tAj6NA5HUJKxPMk8z2ZVLbZg6A+syjuLXRfwgKziaTT5nigjT4QFqRXuI
+         5vrbyBk5EulIjGGKHzsip2L0p3RyLFLeHosXMChrwMLk623c/gT8+U+n6SxflGF26c1K
+         bTmQrswB/5TgR/+gd7TeWpqjfp6oLLIMdPBvLj6tL6HsM8nKRqgCuQEgolvHBRgnbAie
+         pZ3A==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=X0NobGsh;
+       spf=pass (google.com: domain of sathyamreddym@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=sathyamreddym@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <sathyamreddym@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id a640c23a62f3a-a9a297711eesor167335466b.17.2024.10.16.21.17.39
+        for <gattuthanuja23@gmail.com>
+        (Google Transport Security);
+        Wed, 16 Oct 2024 21:17:39 -0700 (PDT)
+Received-SPF: pass (google.com: domain of sathyamreddym@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=X0NobGsh;
+       spf=pass (google.com: domain of sathyamreddym@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=sathyamreddym@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1729138659; x=1729743459; dara=google.com;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=B7kW5+p+Zra1QMGn+G6TgEwTw2itOtAwSczuVhUpJgk=;
+        b=X0NobGsh1Gly59NRgJP6kqvXz0qYauI8zzZkP5uRa2aadp9+AuWk8NvM+uZf/VdFWU
+         5qPw6rMaCcINB7FFu5+6ipCgNoSpbz7M1jigjEvz2QgzAAHoYS9PjvJ9kBHrUE8HZcMU
+         YH/vBntbueMtn4ooz9hSYtmOOMtJRVGeMpKY14aZW86/YiFgQJZbje3gma6uLLcHGvzU
+         3Bywpg2GIQkDBt770Sx80vt36b1SfZ+JDEcTqNpl96eMT9vy6skPbXEX6Gz/I7ZDLwrl
+         gtOPk8G8iLsUf8dQ9U/W4w0cXzrfZV6s/twfBXWwa3yWIoV+iXmp2P0mgi8oYiwn6/HN
+         V7JA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1729138659; x=1729743459;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=B7kW5+p+Zra1QMGn+G6TgEwTw2itOtAwSczuVhUpJgk=;
+        b=NPvGcX0hksngKH446Yk6g1mAKAAV4f7wU/7IrzTnUph5Ic7llqiyI2fznJENZxka13
+         T21lh5sN/aeG2id3qdXaxt5DnGbt/hm0NHuJeACveI4enLTAU5ioXXfiLrtFHWlPHyTs
+         OUoZXNkvhtp19r23el2M1G1oFjvYl+cHxRJvAorZOZYyYRcJk/zkva+Ocz6aYwfNxKYn
+         0dUbLabMutq9SQzVXc5mixqYne5EhpgclE6SOdVJ6kR3IkGK2DhxF+d41khKN7djRSTl
+         NqTOHCKOEK17INq4J6fnwwZWjlhiZN6x1TRdxgi3JuSHqOBigeHtX1Uvgo/u7/LxADHM
+         fJXw==
+X-Gm-Message-State: AOJu0YwVLHzDL6X4g6qnSc0WcCn1PDLcdDT7sVHwgCF6MIvaGqofpTVH
+	qD2EEuyTR3G04e5fWx4qIDrgIE9yNq3lVTK8/P6HFPhokDgJkgFDQyrJUS3DsFsg+zNJ2AhyvFY
+	XtOfmPcEOVELS5IQxwoGqhGQ1l7Br3w==
+X-Google-Smtp-Source: AGHT+IGiDtgbjMhkNtY60J321K3Z8rI6WsTyTqd3v83KJiFRFfPvoXmRSSbNSJp2JOlgqSUWlXvrn/nykO2lv1uyr+Y=
+X-Received: by 2002:a17:906:c113:b0:a9a:1fd2:f668 with SMTP id
+ a640c23a62f3a-a9a34cbd90emr542560666b.19.1729138658537; Wed, 16 Oct 2024
+ 21:17:38 -0700 (PDT)
+MIME-Version: 1.0
+References: <670cb019.170a0220.3827f2.6686SMTPIN_ADDED_BROKEN@mx.google.com>
+In-Reply-To: <670cb019.170a0220.3827f2.6686SMTPIN_ADDED_BROKEN@mx.google.com>
+From: sathyam reddy Mothe <sathyamreddym@gmail.com>
+Date: Thu, 17 Oct 2024 09:47:13 +0530
+Message-ID: <CAPjXK7xBNyLGFPw8JYmFidAbFfgVBB1yQ1qn-R60ZwbUKYSRdw@mail.gmail.com>
+Subject: Fwd: ICCIS 2024: Notification of your paper ID 605: Acceptance
+To: gattu thanuja <gattuthanuja23@gmail.com>
+Content-Type: multipart/alternative; boundary="00000000000082787b0624a477c0"
+
+--00000000000082787b0624a477c0
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+---------- Forwarded message ---------
+From: Microsoft CMT <email@msr-cmt.org>
+Date: Mon, 14 Oct, 2024, 11:16 am
+Subject: ICCIS 2024: Notification of your paper ID 605: Acceptance
+To: SathyamReddy Mothe <sathyamreddym@gmail.com>
+
+
+Dear SathyamReddy Mothe,
+
+Greetings!
+
+Thank you for submitting your research article to the 6th
+International Conference on Communication and Intelligent Systems
+(ICCIS 2024) to be held on November 08-09, 2024 at Maulana Azad
+National Institute of Technology (MANIT), Bhopal, India in Hybrid
+Mode.
+
+We are pleased to inform you that based on reviewers=E2=80=99 comments, you=
+r
+paper titled "Enhancing Cloud Security with Deep Learning - An ANN
+Approach for Cyber Threat Detection" has been accepted for
+presentation during ICCIS 2024, and publication in the proceedings to
+be published in Scopus-indexed Springer Book Series "Lecture Notes in
+Networks and Systems" subject to the condition that you submit a
+revised version as per the comments, available at Authors CMT account.
+It is also required that you prepare a response to each comment from
+the reviewer and upload it as a separate file along with the revised
+paper.
+
+The similarity index in the final paper must be less than 20%. Please
+note that the high plagiarism and any kind of multiple submissions of
+this paper to other conferences or journals will lead to rejection at
+any stage. Please note that the publisher, i.e. Springer Nature may
+ask for any other changes during the production which are supposed to
+be implemented. The publisher has the final right to exclude the paper
+from the proceedings if they found it unsuitable for publication.
+
+Please carry out the steps to submit the camera-ready paper and online
+registration (Under "Regular Author" Category) as per the instructions
+available at
+https://scrs.in/conference/iccis2024/page/Camera_Ready_Paper_Submission
+
+In order to register in the SCRS member category (subsidized
+registration fees), you can first become a member at
+https://www.scrs.in/register and then register for the conference OR
+you may register as a Regular Author Category.
+
+Please note that the Last date for submission of the camera-ready
+paper, payment of the registration fee, and online registration is
+October 24, 2024.
+
+Feel free to write to the "General Chairs, ICCIS 2024" at
+scrs.iccis@gmail.com, should you have any questions or concerns.
+Please remember to always include your Paper ID- 605, whenever
+inquiring about your paper.
+
+Looking forward to meeting you during the conference.
+
+With Regards
+Team ICCIS 2024 (https://scrs.in/conference/iccis2024)
+Maulana Azad National Institute of Technology (MANIT), Bhopal, India
+
+
+
+
+
+To stop receiving conference emails, you can check the 'Do not send me
+conference email' box from your User Profile.
+
+Microsoft respects your privacy. To learn more, please read our
+Privacy Statement <https://go.microsoft.com/fwlink/?LinkId=3D521839>.
+
+Microsoft Corporation
+One Microsoft Way
+<https://www.google.com/maps/search/Microsoft+Way+Redmond,+WA+98052?entry=
+=3Dgmail&source=3Dg>
+Redmond, WA 98052
+<https://www.google.com/maps/search/Microsoft+Way+Redmond,+WA+98052?entry=
+=3Dgmail&source=3Dg>
+
+--00000000000082787b0624a477c0
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto"></div><br><div class=3D"gmail_quote"><div dir=3D"ltr" cla=
+ss=3D"gmail_attr">---------- Forwarded message ---------<br>From: <strong c=
+lass=3D"gmail_sendername" dir=3D"auto">Microsoft CMT</strong> <span dir=3D"=
+auto">&lt;<a href=3D"mailto:email@msr-cmt.org">email@msr-cmt.org</a>&gt;</s=
+pan><br>Date: Mon, 14 Oct, 2024, 11:16 am<br>Subject: ICCIS 2024: Notificat=
+ion of your paper ID 605: Acceptance<br>To: SathyamReddy Mothe &lt;<a href=
+=3D"mailto:sathyamreddym@gmail.com">sathyamreddym@gmail.com</a>&gt;<br></di=
+v><br><br><u></u><div><pre style=3D"font-family:monospace;white-space:pre-w=
+rap">Dear SathyamReddy Mothe,
+
+Greetings!
+
+Thank you for submitting your research article to the 6th International Con=
+ference on Communication and Intelligent Systems (ICCIS 2024) to be held on=
+ November 08-09, 2024 at Maulana Azad National Institute of Technology (MAN=
+IT), Bhopal, India in Hybrid Mode.
+
+We are pleased to inform you that based on reviewers=E2=80=99 comments, you=
+r paper titled &quot;Enhancing Cloud Security with Deep Learning - An ANN A=
+pproach for Cyber Threat Detection&quot; has been accepted for presentation=
+ during ICCIS 2024, and publication in the proceedings to be published in S=
+copus-indexed Springer Book Series &quot;Lecture Notes in Networks and Syst=
+ems&quot; subject to the condition that you submit a revised version as per=
+ the comments, available at Authors CMT account. It is also required that y=
+ou prepare a response to each comment from the reviewer and upload it as a =
+separate file along with the revised paper.=20
+
+The similarity index in the final paper must be less than 20%. Please note =
+that the high plagiarism and any kind of multiple submissions of this paper=
+ to other conferences or journals will lead to rejection at any stage. Plea=
+se note that the publisher, i.e. Springer Nature may ask for any other chan=
+ges during the production which are supposed to be implemented. The publish=
+er has the final right to exclude the paper from the proceedings if they fo=
+und it unsuitable for publication.=20
+=20
+Please carry out the steps to submit the camera-ready paper and online regi=
+stration (Under &quot;Regular Author&quot; Category) as per the instruction=
+s available at =20
+
+<a href=3D"https://scrs.in/conference/iccis2024/page/Camera_Ready_Paper_Sub=
+mission" target=3D"_blank" rel=3D"noreferrer">https://scrs.in/conference/ic=
+cis2024/page/Camera_Ready_Paper_Submission</a>
+
+In order to register in the SCRS member category (subsidized registration f=
+ees), you can first become a member at <a href=3D"https://www.scrs.in/regis=
+ter" target=3D"_blank" rel=3D"noreferrer">https://www.scrs.in/register</a> =
+and then register for the conference OR you may register as a Regular Autho=
+r Category.
+
+Please note that the Last date for submission of the camera-ready paper, pa=
+yment of the registration fee, and online registration is October 24, 2024.=
+=20
+
+Feel free to write to the &quot;General Chairs, ICCIS 2024&quot; at <a href=
+=3D"mailto:scrs.iccis@gmail.com" target=3D"_blank" rel=3D"noreferrer">scrs.=
+iccis@gmail.com</a>, should you have any questions or concerns. Please reme=
+mber to always include your Paper ID- 605, whenever inquiring about your pa=
+per.=20
+
+Looking forward to meeting you during the conference.
+
+With Regards
+Team ICCIS 2024 (<a href=3D"https://scrs.in/conference/iccis2024" target=3D=
+"_blank" rel=3D"noreferrer">https://scrs.in/conference/iccis2024</a>)
+Maulana Azad National Institute of Technology (MANIT), Bhopal, India<br><br=
+><br><br><br><br>To stop receiving conference emails, you can check the &#3=
+9;Do not send me conference email&#39; box from your User Profile.<br><br>M=
+icrosoft respects your privacy. To learn more, please read our <a href=3D"h=
+ttps://go.microsoft.com/fwlink/?LinkId=3D521839" target=3D"_blank" rel=3D"n=
+oreferrer">Privacy Statement</a>.<br><br>Microsoft Corporation<br>One <a hr=
+ef=3D"https://www.google.com/maps/search/Microsoft+Way+Redmond,+WA+98052?en=
+try=3Dgmail&amp;source=3Dg">Microsoft Way</a><br><a href=3D"https://www.goo=
+gle.com/maps/search/Microsoft+Way+Redmond,+WA+98052?entry=3Dgmail&amp;sourc=
+e=3Dg">Redmond, WA 98052</a></pre><img src=3D"https://mucp.api.account.micr=
+osoft.com/m/v2/v?d=3DAIAACQ2EVS3BUVLCF262D5TQJ4CY7S3IB7ZZI3ERW4QYIPN5PYZPTQ=
+WOPEJ4K4XZKLBP3GA4JJPEH3TBH47HPL4DAFP3X5WEDABK6LAYCR5FOMZZSAIB776LKPJ2TRGB3=
+ODJHA7KO6KNQ64MY6CWZVNOIFSWOMI&amp;i=3DAIAADCLWCL7CRGVRDVWLY6OTAI5NS57FZ24V=
+4CL5EEEIGDTIBSXTNL7EEOHTZOEYT7D5FZB5DZFYUEEHKZJJZ7QTZ6WY5QC2GJHA4CUUWC6P7KB=
+QCTCCVZAJ4ZWBXR2EULFJQUD3PXUU2K55YGUKDCU2F77H7KUPT22OJ24YDC2H7JAX77JBYYFUQU=
+PKTFUILCS7UWAVIY477VHRFLGNF7TK7OXSB2YIDHGOKS4QI6IA3MQHDPYBHTU5HYYHTHUQ34XDU=
+SUTNISH724GXUWUGG6DARBUTQQ" width=3D"1" height=3D"1" aria-hidden=3D"true" a=
+lt=3D""></div></div>
+
+--00000000000082787b0624a477c0--
